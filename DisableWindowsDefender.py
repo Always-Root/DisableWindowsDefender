@@ -43,9 +43,9 @@ Purpose: When malware researchers work on Windows,
          a necessary step to continue research effectively.\n\n""")
 if ctypes.windll.shell32.IsUserAnAdmin():
     response = input("1 => Disable Defender\n2 => Enable Defender\n3 => Exit\n# ")
-    if response == 1:
+    if int(response) == 1:
         windead()
-    elif response == 2:
+    elif int(response) == 2:
         winlive()
     else:
         print("")
